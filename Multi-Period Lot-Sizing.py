@@ -39,7 +39,7 @@ with gp.Env() as env, gp.Model(name, env=env) as model:
     #model.addConstr(I[0] == I0)
     
     
-    expr = 0
+    expr = 1
     for i in range(H):
         expr += c[i]*x[i] + f[i]*y[i] + h[i]*I[i]
     model.setObjective(expr, GRB.MINIMIZE)
